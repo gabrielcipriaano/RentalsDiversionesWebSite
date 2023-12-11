@@ -4,3 +4,5 @@ node_modules/
 vendor/
 #build dependences
 src/
+#env file
+includes/.env
