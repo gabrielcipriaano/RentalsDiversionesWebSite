@@ -1,55 +1,87 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
- .no-webp .main {
+.no-webp .main {
     background-image: url(../img/background-header.jpg);
- }
- .webp .main {
-     background-image: url(../img/background-header.webp);
 }
 
-.main{
+.webp .main {
+    background-image: url(../img/background-header.webp);
+}
+
+.main {
     background-position: center center;
     background-size: cover;
     height: 60rem;
     padding: 5rem;
-    display: flex;
 
-    @include m.tablet{
-        .information{
+    @include m.tablet {
+        flex-direction: row;
+    }
+
+    display: flex;
+    flex-direction: column;
+
+    .information {
+
+        padding: 1rem;
+        max-width: 100%;
+        .title {
+            background: linear-gradient(to right, v.$sea-mist-300 0%, lighten(v.$sea-mist-50, 30%) 100%);
+            color: transparent;
+            background-clip: text;
+            font-size: 4rem;
+            font-weight: 900;
+            text-align: center;
+
+        }
+
+        .message {
+            color: v.$sea-mist-100;
+            font-weight: 400;
+            font-size: 2rem;
+            padding: 0 1rem;
+        }
+
+    }
+
+    .redirect {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .button {
+            @include m.boton(v.$sea-mist-950, v.$sea-mist-100);
+            padding: 2rem 4rem;
+            font-size: 2rem;
+        }
+    }
+
+    @include m.tablet {
+        .information {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             max-width: 50%;
-            padding: 1rem;
 
-            .title{
-                background: linear-gradient(to right, v.$sea-mist-300 0%, lighten(v.$sea-mist-50, 30%) 100%);
-                color: transparent;
-                background-clip: text;
+            .title {  
                 font-size: 5rem;
-                font-weight: 900;
-                text-align: center;
-        
+
             }
 
-            .message{
-                color: v.$sea-mist-100;
-                font-weight: 400;
+            .message {
                 font-size: 2.5rem;
+                padding: 0 3.5rem;
             }
 
         }
 
-        .redirect{
+        .redirect {
             width: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
 
-            .button{
-                @include m.boton(v.$sea-mist-950,v.$sea-mist-100);
+            .button {
+                @include m.boton(v.$sea-mist-950, v.$sea-mist-100);
 
                 font-size: 2.5rem;
             }
