@@ -1,0 +1,59 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+ .no-webp .main {
+    background-image: url(../img/background-header.jpg);
+ }
+ .webp .main {
+     background-image: url(../img/background-header.webp);
+}
+
+.main{
+    background-position: center center;
+    background-size: cover;
+    height: 60rem;
+    padding: 5rem;
+    display: flex;
+
+    @include m.tablet{
+        .information{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 50%;
+            padding: 1rem;
+
+            .title{
+                background: linear-gradient(to right, v.$sea-mist-300 0%, lighten(v.$sea-mist-50, 30%) 100%);
+                color: transparent;
+                background-clip: text;
+                font-size: 5rem;
+                font-weight: 900;
+                text-align: center;
+        
+            }
+
+            .message{
+                color: v.$sea-mist-100;
+                font-weight: 400;
+                font-size: 2.5rem;
+            }
+
+        }
+
+        .redirect{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .button{
+                @include m.boton(v.$sea-mist-950,v.$sea-mist-100);
+
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+}
