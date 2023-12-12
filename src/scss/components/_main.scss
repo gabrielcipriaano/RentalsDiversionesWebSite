@@ -1,22 +1,20 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-.no-webp .main {
-    background-image: url(../img/background-header.jpg);
-}
 
-.webp .main {
-    background-image: url(../img/background-header.webp);
-}
 
 .main {
+    background-image: url(../img/background-header.webp);
     background-position: center center;
     background-size: cover;
-    height: 60rem;
+    background-repeat: no-repeat;
+    lazyload: true;
+    height: 65rem;
     padding: 5rem;
 
     @include m.tablet {
         flex-direction: row;
+        padding: 5rem 0;
     }
 
     display: flex;
