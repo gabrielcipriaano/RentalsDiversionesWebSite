@@ -1,0 +1,19 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+// .no-webp .header {
+//     background-image: url(../img/background-header.jpg);
+// }
+// .webp .header {
+//     background-image: url(../img/background-header.webp);
+// }
+
+.header {
+    background-color: v.$sea-mist-800;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 3rem;
+
+}
