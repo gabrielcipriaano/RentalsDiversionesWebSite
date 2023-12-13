@@ -8,6 +8,6 @@
     </div>
 
     <div class="redirect">
-        <a href="/contact" class="button">¡Reserva Ahora!</a>
+        <a href="/contact" class="button">¡Reservar Ahora!</a>
     </div>
 </main>

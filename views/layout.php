@@ -20,21 +20,20 @@
         </a>
 
         <nav class="navegation">
-            <div class="menu-icon" id="menuIcon">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="60" height="60" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M4 6l16 0" />
-                    <path d="M4 12l16 0" />
-                    <path d="M4 18l16 0" />
-                </svg>
-            </div>
-
             <div class="menu-nav">
                 <a href="/gallery">Galeria</a>
                 <a href="/contact">Contacto</a>
                 <a href="/about">Nosotros</a>
-                <a href="/logout">Cerrar Sesion</a>
             </div>
+
+            <a class="logout" href="/logout">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-logout-2" width="60" height="60" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M10 8v-2a2 2 0 0 1 2 -2h7a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-7a2 2 0 0 1 -2 -2v-2" />
+                    <path d="M15 12h-12l3 -3" />
+                    <path d="M6 15l-3 -3" />
+                </svg>
+            </a>
 
         </nav>
     </header>
@@ -43,6 +42,5 @@
     <?php echo $script ?? ''; ?>
 
 </body>
-<script src='/build/js/responsive.js'></script>
 
 </html>
