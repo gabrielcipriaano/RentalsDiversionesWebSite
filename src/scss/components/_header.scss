@@ -35,9 +35,10 @@
         display: flex;
         justify-content: space-evenly;
         flex-direction: column-reverse;
+        margin-top: 2rem;
         @include m.tablet{
             flex-direction: row;
-
+            margin-top: 0;
         }
     }
 
