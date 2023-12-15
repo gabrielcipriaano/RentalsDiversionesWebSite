@@ -13,3 +13,5 @@
 </main>
 
 <?php include_once 'listAdds.php'; ?>
+
+<?php include_once 'benefits.php'; ?>
