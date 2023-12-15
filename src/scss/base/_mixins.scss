@@ -40,6 +40,24 @@
     }
 }
 
+@mixin button($bgColor, $display ) {
+    background-color: $bgColor;
+    color: v.$sea-mist-100;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    text-align: center;
+    margin:  3rem 0 4rem 0;
+    display: $display;
+    border: none;
+    
+
+    &:hover {
+        background-color: lighten($bgColor, 15);
+        cursor: pointer;
+    }
+}
+
 @mixin grid($columnas, $espaciado ) {
     display: grid;
     gap: $espaciado;

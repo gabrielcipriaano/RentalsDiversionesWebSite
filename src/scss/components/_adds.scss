@@ -10,10 +10,15 @@
         color: v.$sea-mist-950;
         margin: 3rem 0;
     }
+
+    
 }
 
 
-
+.botton {
+    @include m.button(v.$sea-mist-700,block);
+    border-radius: 0.2rem;
+}
 
 .container-adds {
     display: flex;
@@ -34,7 +39,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 1.25rem;
+    padding: 3rem 1rem;
     border: 0.0625rem solid #ccc;
     border-radius: 0.5rem;
     background: linear-gradient(145deg, v.$sea-mist-500, v.$sea-mist-700);
@@ -45,10 +50,15 @@
     }
 
     &__img {
-        width: 100%;
-        max-width: 18rem;
+        
+        img{ 
+            width: 18rem;
+            height: 20rem;
+        }
+        
         border-radius: 0.5rem;
         margin-bottom: 0.625rem;
+       
     }
 
     &__name {
@@ -61,21 +71,39 @@
     &__description {
         font-size: 1.8rem;
         margin: 1rem 0;
-        color: v.$sea-mist-100;
-        margin-bottom: 1.25rem;
+        color: v.$sea-mist-200;
+        margin-bottom: 2rem;
+        max-height: 25rem;
+        padding: 0 2rem;
     }
 
     &__button {
-        display: inline-block;
-        padding: 2rem 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 3rem;
         background-color: v.$sea-mist-950;
-        color: v.$sea-mist-100;
         text-decoration: none;
         border-radius: 0.3125rem;
         transition: background-color 0.3s;
-
+        cursor: pointer;
         &:hover {
             background-color: v.$sea-mist-800;
         }
+
+        p{
+            color: v.$sea-mist-100;
+            padding: 0;
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        svg{
+            max-width: 3rem;
+            padding: 0;
+            margin-right: 1rem;
+        }
+    
+        
     }
 }
