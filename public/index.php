@@ -8,7 +8,7 @@ $router = new Router();
 
 // Main Page
 $router->get('/',[PagesController::class,'index']);
-$router->get('/adds',[PagesController::class,'adds']);
+$router->get('/gallery',[PagesController::class,'gallery']);
 $router->get('/about',[PagesController::class,'about']);
 
 // Comprueba y valida las rutas, que existan y les asigna las funciones del Controlador

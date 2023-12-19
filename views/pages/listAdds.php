@@ -84,10 +84,11 @@
 
         </div>
     </div>
-
-    <div class="right">
-        <a href="/adds" class="botton">
-            Ver Todos
-        </a>
-    </div>
+    <?php if ($main) : ?>
+        <div class="right">
+            <a href="/adds" class="botton">
+                Ver Todos
+            </a>
+        </div>
+    <?php endif; ?>
 </section>

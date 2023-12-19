@@ -9,13 +9,16 @@ class PagesController {
 
         
         $router->renderView('pages/index',[
+            'main' => true
             
         ]);
     } 
     public static function about(Router $router){
         echo 'desde about';
     } 
-    public static function adds(Router $router){
-        echo 'desde adds';
+    public static function gallery(Router $router){
+        $router->renderView('pages/listAdds',[
+            'main' => false
+        ]);
     } 
 }
