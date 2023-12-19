@@ -5,7 +5,7 @@
         <div class="add">
             <picture class="add__img">
                 <source srcset="/build/img/bob.webp" type="image/webp">
-                <img loading="lazy" src="/build/img/bob.jpg" alt="imagen bob" class="add__img-src">
+                <img loading="lazy" src="/build/img/bob.jpg" alt="imagen bob" width="500" height="500" class="add__img-src">
             </picture>
 
             <h3 class="add__name">
@@ -32,7 +32,7 @@
         <div class="add">
             <picture class="add__img">
                 <source srcset="/build/img/mario.webp" type="image/webp">
-                <img loading="lazy" src="/build/img/mario.jpg" alt="imagen mario" class="add__img-src">
+                <img loading="lazy" src="/build/img/mario.jpg" alt="imagen mario" width="500" height="500" class="add__img-src">
             </picture>
 
             <h3 class="add__name">
@@ -59,7 +59,7 @@
         <div class="add">
             <picture class="add__img">
                 <source srcset="/build/img/mario.webp" type="image/webp">
-                <img loading="lazy" src="/build/img/mario.jpg" alt="imagen mario" class="add__img-src">
+                <img loading="lazy" src="/build/img/mario.jpg" alt="imagen mario" width="500" height="500" class="add__img-src">
             </picture>
 
             <h3 class="add__name">

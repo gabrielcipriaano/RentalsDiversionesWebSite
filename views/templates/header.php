@@ -3,7 +3,7 @@
     <a href="/" class="logo">
         <picture>
             <source srcset="/build/img/logo.webp" type="image/webp">
-            <img loading="lazy" src="/build/img/logo.jpg" alt="Logo Rental's y Diversiones">
+            <img loading="lazy" src="/build/img/logo.jpg" width="100" height="100" alt="Logo Rental's y Diversiones">
         </picture>
     </a>
 

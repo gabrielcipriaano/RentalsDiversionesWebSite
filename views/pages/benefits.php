@@ -3,7 +3,7 @@
     <div class="benefit">
         <picture class="benefit__img">
             <source srcset="/build/img/diversion.webp" type="image/webp">
-            <img loading="lazy" src="/build/img/diversion.png" alt="icono diversion" class="add__img-src">
+            <img loading="lazy" src="/build/img/diversion.png" width="100" height="100" alt="icono diversion" class="add__img-src">
         </picture>
         <h3 class="benefit__title">Diversión Garantizada</h3>
         <p class="benefit__description">
@@ -14,7 +14,7 @@
     <div class="benefit">
         <picture class="benefit__img">
             <source srcset="/build/img/edades.webp" type="image/webp">
-            <img loading="lazy" src="/build/img/edades.png" alt="icono edades" class="add__img-src">
+            <img loading="lazy" src="/build/img/edades.png" width="100" height="100" alt="icono edades" class="add__img-src">
         </picture>
         <h3 class="benefit__title">Para Todas las Edades</h3>
         <p class="benefit__description">
@@ -27,7 +27,7 @@
 
         <picture class="benefit__img">
             <source srcset="/build/img/fecha.webp" type="image/webp">
-            <img loading="lazy" src="/build/img/fecha" alt="icono fecha" class="add__img-src">
+            <img loading="lazy" src="/build/img/fecha" width="100" height="100" alt="icono fecha" class="add__img-src">
         </picture>
 
         <h3 class="benefit__title">Fácil Reserva en Línea</h3>
@@ -40,7 +40,7 @@
     <div class="benefit">
         <picture class="benefit__img">
             <source srcset="/build/img/variedad.webp" type="image/webp">
-            <img loading="lazy" src="/build/img/variedad.png" alt="icono variedad" class="add__img-src">
+            <img loading="lazy" src="/build/img/variedad.png" width="100" height="100" alt="icono variedad" class="add__img-src">
         </picture>
         <h3 class="benefit__title">Variedad de Temas</h3>
         <p class="benefit__description">

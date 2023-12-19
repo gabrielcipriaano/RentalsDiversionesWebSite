@@ -9,19 +9,19 @@
             <a href="">
                 <picture class="contact__icon">
                     <source srcset="/build/img/facebook.webp" type="image/webp">
-                    <img loading="lazy" src="/build/img/facebook.png" alt="icono facebook" class="add__img-src">
+                    <img loading="lazy" src="/build/img/facebook.png" width="50" height="50" alt="icono facebook" class="add__img-src">
                 </picture>
             </a>
             <a href="">
                 <picture class="contact__icon">
                     <source srcset="/build/img/whatsapp.webp" type="image/webp">
-                    <img loading="lazy" src="/build/img/whatsapp.png" alt="icono whatsapp" class="add__img-src">
+                    <img loading="lazy" src="/build/img/whatsapp.png" width="50" height="50"alt="icono whatsapp" class="add__img-src">
                 </picture>
             </a>
             <a href="">
                 <picture class="contact__icon">
                     <source srcset="/build/img/telefono.webp" type="image/webp">
-                    <img loading="lazy" src="/build/img/telefono.png" alt="icono telefono" class="add__img-src">
+                    <img loading="lazy" src="/build/img/telefono.png" width="50" height="50" alt="icono telefono" class="add__img-src">
                 </picture>
             </a>
         </div>
