@@ -35,8 +35,8 @@
 .container-adds {
     display: flex;
     flex-direction: column;
-
-    @include m.tablet {
+    gap: 2rem;
+    @include m.desktop {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 2rem;
