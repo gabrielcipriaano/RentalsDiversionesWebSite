@@ -18,6 +18,18 @@
 .botton {
     @include m.button(v.$sea-mist-700,block);
     border-radius: 0.2rem;
+    transition: transform 0.3s;
+
+    &:hover{
+        margin-right: 1.2rem;
+        transform: scale(1.2);
+    }
+    margin-top: 0;
+    margin-bottom: 2rem;
+
+    @include m.tablet{
+        margin: 1.2rem 0;
+    }
 }
 
 .container-adds {
@@ -87,8 +99,11 @@
         border-radius: 0.3125rem;
         transition: background-color 0.3s;
         cursor: pointer;
+        transition: transform 0.3s;
         &:hover {
             background-color: v.$sea-mist-800;
+            transform: scale(1.2);
+            
         }
 
         p{

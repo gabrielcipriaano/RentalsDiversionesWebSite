@@ -17,7 +17,7 @@
 
 
     .logo {
-        img{
+        img {
             width: 10rem;
             height: 10rem;
         }
@@ -26,20 +26,43 @@
 
     .logout {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         margin: 3rem 3rem;
         cursor: pointer;
+        color: v.$sea-mist-50;
+        text-align: center;
 
-        
+        svg {
+            margin-bottom: 1rem;
+            transition: fill 0.3s ease;
+        }
+
+        transition: transform 0.3s;
+
+        &:hover {
+            color: v.$sea-mist-400;
+            transform: scale(1.2);
+
+            svg{
+                fill: v.$sea-mist-400;
+            }
+        }
+
+        @include m.tablet{
+            margin:0 0 0 4rem;
+        }
+
     }
 
-    .navegation{
+    .navegation {
         display: flex;
         justify-content: space-evenly;
         flex-direction: column-reverse;
         margin-top: 2rem;
-        @include m.tablet{
+
+        @include m.tablet {
             flex-direction: row;
             margin-top: 0;
         }
@@ -49,25 +72,27 @@
         display: flex;
         align-items: center;
         justify-content: center;
-    
+
         @include m.tablet {
             display: flex;
             flex-direction: row;
 
         }
-    
+
         a {
             padding: 1rem;
             font-size: 2rem;
             color: v.$sea-mist-100;
-    
+            transition: transform 0.3s;
+
             &:hover {
                 color: v.$sea-mist-400;
+                transform: scale(1.2);
             }
         }
-    
-       
+
+
     }
-    
-    
+
+
 }

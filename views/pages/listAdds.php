@@ -86,6 +86,8 @@
     </div>
 
     <div class="right">
-        <a href="/adds" class="botton"> Ver Todos</a>
+        <a href="/adds" class="botton">
+            Ver Todos
+        </a>
     </div>
 </section>

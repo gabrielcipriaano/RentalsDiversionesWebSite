@@ -11,12 +11,13 @@
     background-color: v.$sea-mist-950;
     lazyload: true;
     width: 100%;
-    height: 65rem;
+    max-height: 85rem;
     padding: 5rem;
 
     @include m.tablet {
         flex-direction: row;
         padding: 5rem 0;
+        min-height: 60rem;
     }
 
     display: flex;
@@ -32,7 +33,7 @@
             color: transparent;
             background-clip: text;
             font-size: 4rem;
-            font-weight: 900;
+            font-weight: 700;
             text-align: center;
 
         }
@@ -51,6 +52,16 @@
             }
         }
 
+        @include m.tablet {
+            .title {
+                font-size: 4rem;
+            }
+
+            .message {
+                font-size: 2rem;
+            }
+        }
+
     }
 
     .redirect {
@@ -58,10 +69,29 @@
         justify-content: center;
         align-items: center;
 
-        .button {
-            @include m.boton(v.$sea-mist-950, v.$sea-mist-100);
-            padding: 2rem 4rem;
-            font-size: 2rem;
+        .button-redirect {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem 3rem;
+            background-color: v.$sea-mist-950;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 0.3125rem;
+            transition: background-color 0.3s;
+            font-size: 1.8rem;
+            font-weight: 700;
+            transition: transform 0.3s;
+
+
+            &:hover {
+                background-color: v.$sea-mist-800;
+                transform: scale(1.2);
+            }
+
+            svg {
+                margin-right: 1rem;
+            }
         }
     }
 
@@ -88,10 +118,11 @@
         .redirect {
             width: 50%;
 
-            .button {
-                @include m.boton(v.$sea-mist-950, v.$sea-mist-100);
+            .button-redirect {
 
-                font-size: 2.5rem;
+                svg {
+                    max-width: 4rem;
+                }
             }
         }
     }
