@@ -1,0 +1,96 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.page-contact__title {
+    margin: 8rem 0;
+    font-size: 4rem;
+    font-weight: 700;
+    color: v.$sea-mist-900;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    max-height: 300rem;
+    background: linear-gradient(to bottom, v.$sea-mist-900 50%, v.$sea-mist-100 50%);
+    border-radius: 5px;
+
+    @include m.tablet {
+        flex-direction: row;
+        background: linear-gradient(to right, v.$sea-mist-900 50%, v.$sea-mist-100 50%);
+    }
+}
+
+
+.contact-socials {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include m.tablet {
+        width: 50%;
+        height: 100%;
+        padding: 0 10rem 10rem 10rem;
+    }
+
+    height: 50%;
+    width: 100%;
+    margin: 0;
+    padding: 0 2rem 2rem 2rem;
+    position: relative;
+    border-radius: 0 0 0 10px;
+
+    .contact-socials__title {
+        color: v.$sea-mist-50;
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    .contact-socials__message {
+        color: v.$sea-mist-200;
+        font-size: 1.8rem;
+        font-weight: 400;
+        text-align: center;
+
+        @include m.tablet{
+            text-align: left;
+        }
+    }
+
+    .contact-socials__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s;
+        margin-left: 3rem;
+        @include m.tablet{
+            margin-left: 0;
+        }
+        .contact-socials__label {
+            color: v.$sea-mist-200;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-left: 2rem;
+        }
+
+        &:hover {
+            transform: scale(1.2);
+
+            .contact-socials__label {
+                color: v.$sea-mist-50;
+            }
+
+        }
+    }
+
+
+    .contact-socials__img {
+        img {
+            width: 4rem;
+            height: auto;
+        }
+    }
+}

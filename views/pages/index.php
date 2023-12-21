@@ -25,5 +25,5 @@
 
 
 <?php include_once 'listAdds.php'; ?>
-<?php include_once 'contact.php'; ?>
+<?php include_once 'contactSection.php'; ?>
 <?php include_once 'benefits.php'; ?>
