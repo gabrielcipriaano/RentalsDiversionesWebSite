@@ -1,0 +1,41 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.about__title{
+    font-weight: 700;
+    text-align: center;
+    font-size: 4rem;
+    margin: 5rem 0;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    .about__image{
+        img{
+            width: 50rem;
+            height: auto;
+        }
+    }
+
+    .about__description{
+        text-align: center;
+        padding: 1rem;
+        color: v.$sea-mist-900;
+    }
+
+    @include m.desktop{
+        flex-direction: row ;
+
+        .about__image{
+            width: 50%;
+            margin: 5rem;
+        }
+    
+        .about__description{
+            width: 50%;
+            text-align: start;
+        }
+    }
+}

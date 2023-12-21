@@ -15,7 +15,7 @@ class PagesController
     }
     public static function about(Router $router)
     {
-        $router->renderView('pages/contact', [
+        $router->renderView('pages/about', [
             'main' => false
         ]);
     }
