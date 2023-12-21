@@ -1,0 +1,137 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+
+.main {
+    background-image: url(../img/background-header.webp);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: v.$sea-mist-950;
+    lazyload: true;
+    width: 100%;
+    max-height: 85rem;
+    padding: 5rem 0;
+
+    @include m.desktop {
+        flex-direction: row;
+        min-height: 60rem;
+        padding: 5rem;
+
+        .information {
+
+            padding: 0rem;
+        }
+    }
+
+    display: flex;
+    flex-direction: column;
+
+    .information {
+
+        padding: 5rem;
+        max-width: 100%;
+
+        .title {
+            background: linear-gradient(to right, v.$sea-mist-300 0%, lighten(v.$sea-mist-50, 30%) 100%);
+            color: transparent;
+            background-clip: text;
+            font-size: 4rem;
+            font-weight: 700;
+            text-align: center;
+            width: 100%;
+
+        }
+
+        .message {
+            width: 100%;
+            color: v.$sea-mist-100;
+            font-weight: 400;
+            font-size: 2rem;
+            padding: 0 1rem;
+
+            span {
+                background: linear-gradient(to right, v.$sea-mist-300 0%, lighten(v.$sea-mist-50, 30%) 100%);
+                color: transparent;
+                background-clip: text;
+                font-weight: 900;
+            }
+        }
+
+        @include m.desktop {
+            .title {
+                font-size: 4rem;
+            }
+
+            .message {
+                font-size: 2rem;
+            }
+        }
+
+    }
+
+    .redirect {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .button-redirect {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem 3rem;
+            background-color: v.$sea-mist-950;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 0.3125rem;
+            transition: background-color 0.3s;
+            font-size: 1.8rem;
+            font-weight: 700;
+            transition: transform 0.3s;
+
+
+            &:hover {
+                background-color: v.$sea-mist-800;
+                transform: scale(1.2);
+            }
+
+            svg {
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    @include m.desktop {
+        .information {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 50%;
+
+            .title {
+                font-size: 5rem;
+
+            }
+
+            .message {
+                font-size: 2.5rem;
+                padding: 0 3.5rem;
+            }
+
+        }
+
+        .redirect {
+            width: 50%;
+
+            .button-redirect {
+
+                svg {
+                    max-width: 4rem;
+                }
+            }
+        }
+    }
+
+}

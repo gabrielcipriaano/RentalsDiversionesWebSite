@@ -1,0 +1,119 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contact {
+    background-image: url(../img/contact.webp);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-height: 70rem;
+
+    @include m.tablet {
+        height: 46rem;
+        @include m.grid(2, 1rem);
+    }
+
+    text-align: center;
+    color: #fff;
+    padding: 4rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 5rem;
+
+    .contact__message {
+        max-width: 60rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h3 {
+            font-weight: 700;
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 1.8rem;
+            color: v.$sea-mist-100;
+        }
+
+        @include m.tablet {
+            h3 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .contact__icons-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .contact__actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+
+        a {
+            display: block;
+            transition: transform 0.3s;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+
+        .contact__icon {
+
+            img {
+                width: 5rem;
+                height: auto;
+                margin: 0 1rem;
+            }
+
+
+
+        }
+    }
+
+    .contact__button {
+        margin: 5rem;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                margin-right: 1rem;
+                max-width: 5rem;
+            }
+        }
+    }
+
+
+    .button {
+        padding: 1.5rem 3rem;
+        background-color: v.$sea-mist-950;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 0.3125rem;
+        transition: background-color 0.3s;
+        font-size: 1.8rem;
+        font-weight: 700;
+
+
+        &:hover {
+            background-color: v.$sea-mist-800;
+        }
+
+
+    }
+}

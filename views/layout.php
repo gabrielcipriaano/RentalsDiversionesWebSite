@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UpTask</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Open+Sans&display=swap" rel="stylesheet"> 
+    <title>Rental's y Diversiones</title>
+    <link rel="preload" href="build/css/app.css" as="style" />
+    <link rel="preload" href="build/img/background-header.webp" as="image" />
+    <link rel="preload" href="build/img/contact.webp" as="image" />
     <link rel="stylesheet" href="build/css/app.css">
+
 </head>
+
+
 <body>
+
+    <?php include_once 'templates/header.php'; ?>
 
     <?php echo $content; ?>
     <?php echo $script ?? ''; ?>
 
+    <?php include_once 'templates/footer.php'; ?>
+
 </body>
+
 </html>

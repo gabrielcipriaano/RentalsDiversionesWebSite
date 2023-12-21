@@ -1,0 +1,124 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenedor {
+    text-align: center;
+
+    h2 {
+        font-size: 4rem;
+        font-weight: 700;
+        color: v.$sea-mist-950;
+        margin: 3rem 0;
+    }
+
+    
+}
+
+
+.botton {
+    @include m.button(v.$sea-mist-700,block);
+    border-radius: 0.2rem;
+    transition: transform 0.3s;
+
+    &:hover{
+        margin-right: 1.2rem;
+        transform: scale(1.2);
+    }
+    margin-top: 0;
+    margin-bottom: 2rem;
+
+    @include m.tablet{
+        margin: 1.2rem 0;
+    }
+}
+
+.container-adds {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    @include m.desktop {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+
+    }
+
+
+}
+
+.add {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 1rem;
+    border: 0.0625rem solid #ccc;
+    border-radius: 0.5rem;
+    background: linear-gradient(145deg, v.$sea-mist-500, v.$sea-mist-700);
+    margin: 2rem 0;
+
+    @include m.tablet {
+        margin: 0;
+    }
+
+    &__img {
+        
+        img{ 
+            width: 18rem;
+            height: 20rem;
+        }
+        
+        border-radius: 0.5rem;
+        margin-bottom: 0.625rem;
+       
+    }
+
+    &__name {
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: v.$sea-mist-100;
+        margin: 1rem 0;
+    }
+
+    &__description {
+        font-size: 1.8rem;
+        margin: 1rem 0;
+        color: v.$sea-mist-200;
+        margin-bottom: 2rem;
+        max-height: 25rem;
+        padding: 0 2rem;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 3rem;
+        background-color: v.$sea-mist-950;
+        text-decoration: none;
+        border-radius: 0.3125rem;
+        transition: background-color 0.3s;
+        cursor: pointer;
+        transition: transform 0.3s;
+        &:hover {
+            background-color: v.$sea-mist-800;
+            transform: scale(1.2);
+            
+        }
+
+        p{
+            color: v.$sea-mist-100;
+            padding: 0;
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        svg{
+            max-width: 3rem;
+            padding: 0;
+            margin-right: 1rem;
+        }
+    
+        
+    }
+}
