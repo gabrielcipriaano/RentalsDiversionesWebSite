@@ -35,14 +35,14 @@
         width: auto;
     }
     &:hover {
-        background-color: lighten( $bgColor, 10% );
+        background-color: darken( $bgColor, 10 );
         cursor: pointer;
     }
 }
 
 @mixin button($bgColor, $display ) {
     background-color: $bgColor;
-    color: v.$sea-mist-100;
+    color: v.$blanco;
     font-weight: 700;
     text-decoration: none;
     padding: 1rem 3rem;
@@ -53,7 +53,7 @@
     
 
     &:hover {
-        background-color: lighten($bgColor, 15);
+        background-color: darken($bgColor,5);
         cursor: pointer;
     }
 }
