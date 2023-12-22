@@ -4,18 +4,33 @@ namespace Controllers;
 
 use MVC\Router;
 
-class PagesController {
-    public static function index(Router $router){
+class PagesController
+{
+    public static function index(Router $router)
+    {
+        $router->renderView('pages/index', [
+            'main' => true
 
-        
-        $router->renderView('pages/index',[
-            
         ]);
-    } 
-    public static function about(Router $router){
-        echo 'desde about';
-    } 
-    public static function adds(Router $router){
-        echo 'desde adds';
-    } 
+    }
+    public static function about(Router $router)
+    {
+        $router->renderView('pages/about', [
+            'main' => false
+        ]);
+    }
+    public static function contact(Router $router)
+    {
+        $script = "<script src='build/js/dinamicRadio.js'></script>";
+        $router->renderView('pages/contact', [
+            'main' => false,
+            'script' => $script
+        ]);
+    }
+    public static function gallery(Router $router)
+    {
+        $router->renderView('pages/listAdds', [
+            'main' => false
+        ]);
+    }
 }

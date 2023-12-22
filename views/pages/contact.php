@@ -1,44 +1,75 @@
-<section class="contact contenedor">
-    <div class="contact__message">
-        <h3>¡Convierte Tu Evento en una Experiencia Inolvidable!</h3>
-        <p>Transforma tu evento con nosotros. Contáctanos por redes sociales, llamada o llena el formulario y te responderemos</p>
-    </div>
+<main class="contenedor page-contact">
+    <h1 class="page-contact__title">¡Hablemos de Diversión! Contacta con Nosotros</h1>
 
-    <div class="contact__actions">
-        <div class="contact__icons-container">
-            <a href="">
-                <picture class="contact__icon">
+    <div class="form-container">
+        <div class="contact-socials">
+            <h2 class="contact-socials__title">
+                Información de contacto
+            </h2>
+            <p class="contact-socials__message">
+                Contáctanos por redes sociales,
+                llamada o llena el formulario y te responderemos
+            </p>
+
+            <a href="/linktofacebook" class="contact-socials__item">
+                <picture class="contact-socials__img">
                     <source srcset="/build/img/facebook.webp" type="image/webp">
-                    <img loading="lazy" src="/build/img/facebook.png" width="50" height="50" alt="icono facebook" class="add__img-src">
+                    <img loading="lazy" src="/build/img/facebook.png" width="100" height="100" alt="icono facebook">
                 </picture>
+                <h2 class="contact-socials__label">@Rental's y Diversiones</h2>
             </a>
-            <a href="">
-                <picture class="contact__icon">
+            <a href="/linktowhatsapp" class="contact-socials__item">
+                <picture class="contact-socials__img">
                     <source srcset="/build/img/whatsapp.webp" type="image/webp">
-                    <img loading="lazy" src="/build/img/whatsapp.png" width="50" height="50" alt="icono whatsapp" class="add__img-src">
+                    <img loading="lazy" src="/build/img/whatsapp.png" width="100" height="100" alt="icono whatsapp">
                 </picture>
+                <h2 class="contact-socials__label">1234567890</h2>
             </a>
-            <a href="">
-                <picture class="contact__icon">
+            <a href="tel:+1234567890" class="contact-socials__item">
+                <picture class="contact-socials__img">
                     <source srcset="/build/img/telefono.webp" type="image/webp">
-                    <img loading="lazy" src="/build/img/telefono.png" width="50" height="50" alt="icono telefono" class="add__img-src">
+                    <img loading="lazy" src="/build/img/telefono.png" width="100" height="100" alt="icono teléfono">
                 </picture>
+                <h2 class="contact-socials__label">Llámanos</h2>
             </a>
         </div>
 
-        <div class="contact__button">
+        <form class="form" action="/contact" method="POST">
+            <fieldset>
+                <legend>Información Personal</legend>
 
-            <a href="/contact" class="button">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-spreadsheet" width="60" height="60" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M14 3v4a1 1 0 0 0 1 1h4" />
-                    <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
-                    <path d="M8 11h8v7h-8z" />
-                    <path d="M8 15h8" />
-                    <path d="M11 11v7" />
-                </svg>
-                Llenar Formulario
-            </a>
-        </div>
+                <label for="name">Nombre:</label>
+                <input type="text" placeholder="Tu Nombre" id="nameContact" name="contact[name]" required>
+
+                <label for="name">Mensaje:</label>
+                <textarea id="message" name="contact[message]" required></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Información de Contacto</legend>
+
+                <p>¿Cómo desea ser contactado?</p>
+                <pre></pre>
+
+                <div class="type-contact">
+                    <label for="phone-contact">Teléfono</label>
+                    <input name="contact[type-contact]" type="radio" value="teléfono" id="phone-contact" required>
+
+                    <label for="email-contact">E-mail</label>
+                    <input name="contact[type-contact]" type="radio" value="email" id="email-contact" required>
+                </div>
+                <pre></pre>
+                <div id="contact">
+                </div>
+
+
+
+            </fieldset>
+
+            <input type="submit" value="Enviar" class="button-form">
+        </form>
     </div>
-</section>
+
+
+
+</main>
