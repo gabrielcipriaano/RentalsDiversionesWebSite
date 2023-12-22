@@ -2,7 +2,7 @@
 @use 'base/mixins' as m;
 
 footer {
-    background-color: v.$sea-mist-950;
+    background-color: v.$negro;
     color: #fff;
     padding-top: 4rem;
     padding-bottom: 0;
@@ -51,7 +51,7 @@ footer {
     }
 
     a {
-        color: v.$sea-mist-100;
+        color: v.$sea-mist-50;
         margin-bottom: 1rem;
         text-align: center;
 
@@ -62,7 +62,7 @@ footer {
 
     @include m.tablet {
         a {
-            color: v.$sea-mist-100;
+           
             margin-bottom: 1rem;
             text-align: left;
         }
@@ -85,7 +85,7 @@ footer {
     }
 
     a {
-        color: v.$sea-mist-300;
+        color: v.$sea-mist-300
     }
 
     @include m.tablet {
@@ -112,7 +112,7 @@ footer {
     padding: 0 4rem;
 
     p {
-        color: v.$sea-mist-50;
+        color: v.$blanco;
         padding: 3rem 0;
         text-align: center;
         margin: 0;

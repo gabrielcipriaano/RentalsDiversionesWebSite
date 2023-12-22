@@ -2,7 +2,7 @@
 @use 'base/mixins' as m;
 
 .header {
-    background-color: v.$sea-mist-950;
+    background-color: v.$negro;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,23 +31,13 @@
         justify-content: center;
         margin: 3rem 3rem;
         cursor: pointer;
-        color: v.$sea-mist-50;
+        color: v.$blanco;
         text-align: center;
-
-        svg {
-            margin-bottom: 1rem;
-            transition: fill 0.3s ease;
-        }
-
         transition: transform 0.3s;
-
+        font-size: 2rem;
         &:hover {
-            color: v.$sea-mist-400;
+            color: v.$sea-mist-200;
             transform: scale(1.2);
-
-            svg{
-                fill: v.$sea-mist-400;
-            }
         }
 
         @include m.tablet{
@@ -72,21 +62,21 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
+        margin-top: 2rem;
         @include m.tablet {
             display: flex;
             flex-direction: row;
-
+            margin-top: 0;
         }
 
         a {
             padding: 1rem;
             font-size: 2rem;
-            color: v.$sea-mist-100;
+            color: v.$blanco;
             transition: transform 0.3s;
 
             &:hover {
-                color: v.$sea-mist-400;
+                color: v.$sea-mist-200;
                 transform: scale(1.2);
             }
         }

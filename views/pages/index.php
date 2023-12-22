@@ -2,8 +2,9 @@
     <div class="information">
         <h1 class="title">¡Haz de tu Celebración un Evento Inolvidable!</h1>
         <p class="message">
-            Añade un toque único de diversión y emoción a cada momento especial, nuestra selección
-            variada de <span>Brincolines</span> garantiza que todos encuentren la diversión a su medida.
+            Haz que cada momento sea único! Descubre diversión y emoción con nuestra
+            <span>variedad de Brincolines</span>
+
         </p>
     </div>
 

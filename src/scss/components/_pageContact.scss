@@ -15,12 +15,12 @@
     align-items: center;
     margin: 0;
     max-height: 300rem;
-    background: linear-gradient(to bottom, v.$sea-mist-900 50%, v.$sea-mist-100 50%);
+    background: linear-gradient(to bottom, v.$sea-mist-900 50%, v.$blanco 50%);
     border-radius: 5px;
-
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); // Sutil sombra
     @include m.tablet {
         flex-direction: row;
-        background: linear-gradient(to right, v.$sea-mist-900 50%, v.$sea-mist-100 50%);
+        background: linear-gradient(to right, v.$sea-mist-900 50%, v.$blanco 50%);
     }
 }
 
@@ -70,10 +70,12 @@
             margin-left: 0;
         }
         .contact-socials__label {
+            margin: 4rem 0;
             color: v.$sea-mist-200;
             font-size: 1.5rem;
             text-align: center;
             margin-left: 2rem;
+            
         }
 
         &:hover {

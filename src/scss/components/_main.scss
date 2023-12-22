@@ -8,16 +8,14 @@
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: v.$sea-mist-950;
     width: 100%;
     max-height: 85rem;
     padding: 5rem 0;
 
     @include m.desktop {
         flex-direction: row;
-        min-height: 60rem;
         padding: 5rem;
-
+        min-height: 70rem;
         .information {
 
             padding: 0rem;
@@ -29,14 +27,12 @@
 
     .information {
 
-        padding: 5rem;
+        padding: 2rem;
         max-width: 100%;
 
         .title {
-            background: linear-gradient(to right, v.$sea-mist-300 0%, lighten(v.$sea-mist-50, 30%) 100%);
-            color: transparent;
-            background-clip: text;
-            font-size: 4rem;
+            color: v.$blanco;
+            font-size: 3rem;
             font-weight: 700;
             text-align: center;
             width: 100%;
@@ -45,26 +41,29 @@
 
         .message {
             width: 100%;
-            color: v.$sea-mist-100;
+            color: lighten(v.$parrafo,80);
             font-weight: 400;
-            font-size: 2rem;
+            font-size: 1.8rem;
+            text-align: center;
             padding: 0 1rem;
 
             span {
-                background: linear-gradient(to right, v.$sea-mist-300 0%, lighten(v.$sea-mist-50, 30%) 100%);
-                color: transparent;
-                background-clip: text;
+                
+                color: v.$blanco;
                 font-weight: 900;
             }
         }
 
         @include m.desktop {
+
+            padding: 5rem;
             .title {
                 font-size: 4rem;
             }
 
             .message {
                 font-size: 2rem;
+                text-align: left;
             }
         }
 
@@ -79,11 +78,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 1.5rem 3rem;
-            background-color: v.$sea-mist-950;
-            color: #fff;
+            padding: 1.2rem 2rem;
+            background-color: v.$verde;
+            color: v.$blanco;
             text-decoration: none;
-            border-radius: 0.3125rem;
+            border-radius: 0.5rem;
             transition: background-color 0.3s;
             font-size: 1.8rem;
             font-weight: 700;
@@ -91,12 +90,16 @@
 
 
             &:hover {
-                background-color: v.$sea-mist-800;
+                background-color: darken(v.$verde, 10);
                 transform: scale(1.2);
             }
 
             svg {
                 margin-right: 1rem;
+            }
+
+            @include m.tablet{
+                padding: 1.5rem 3rem;
             }
         }
     }

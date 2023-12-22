@@ -5,7 +5,7 @@
             <source srcset="/build/img/diversion.webp" type="image/webp">
             <img loading="lazy" src="/build/img/diversion.png" width="100" height="100" alt="icono diversion" class="add__img-src">
         </picture>
-        <h3 class="benefit__title">Diversión Garantizada</h3>
+        <h2 class="benefit__title">Diversión Garantizada</h2>
         <p class="benefit__description">
             Transforma cualquier ocasión en risas y alegría. Brincolines diseñados para momentos inolvidables.
         </p>
@@ -16,7 +16,7 @@
             <source srcset="/build/img/edades.webp" type="image/webp">
             <img loading="lazy" src="/build/img/edades.png" width="100" height="100" alt="icono edades" class="add__img-src">
         </picture>
-        <h3 class="benefit__title">Para Todas las Edades</h3>
+        <h2 class="benefit__title">Para Todas las Edades</h2>
         <p class="benefit__description">
             Desde los más pequeños hasta los adultos, todos disfrutarán de la magia del brincolín.
             Creamos momentos de diversión para cada miembro de la familia.
@@ -30,7 +30,7 @@
             <img loading="lazy" src="/build/img/fecha" width="100" height="100" alt="icono fecha" class="add__img-src">
         </picture>
 
-        <h3 class="benefit__title">Fácil Reserva en Línea</h3>
+        <h2 class="benefit__title">Fácil Reserva en Línea</h2>
         <p class="benefit__description">
             Planifica tu evento con unos clics. Asegura la disponibilidad rápidamente.
             ¡No pierdas tiempo, reserva ahora y garantiza la diversión en tu evento!
@@ -42,7 +42,7 @@
             <source srcset="/build/img/variedad.webp" type="image/webp">
             <img loading="lazy" src="/build/img/variedad.png" width="100" height="100" alt="icono variedad" class="add__img-src">
         </picture>
-        <h3 class="benefit__title">Variedad de Temas</h3>
+        <h2 class="benefit__title">Variedad de Temas</h2>
         <p class="benefit__description">
             Tenemos el brincolín perfecto para tu temática. Personaliza tu evento con nuestra amplia gama de opciones.
         </p>
