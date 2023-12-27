@@ -94,7 +94,7 @@
     </div>
     <?php if ($main) : ?>
         <div class="right">
-            <a href="/gallery" class="botton">
+            <a href="/brincolines" class="botton">
                 Ver Todos Los Brincolínes
             </a>
         </div>

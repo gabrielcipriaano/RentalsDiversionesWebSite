@@ -8,9 +8,12 @@ $router = new Router();
 
 // Main Page
 $router->get('/',[PagesController::class,'index']);
-$router->get('/gallery',[PagesController::class,'gallery']);
+$router->get('/brincolines',[PagesController::class,'brincolines']);
 $router->get('/about',[PagesController::class,'about']);
 $router->get('/contact',[PagesController::class,'contact']);
+$router->get('/brincolin',[PagesController::class,'brincolin']);
+$router->get('/furniture',[PagesController::class,'furniture']);
+
 
 // Check and validate the routes, ensuring they exist and assign them the functions of the Controller
 $router->checkRoutes();
