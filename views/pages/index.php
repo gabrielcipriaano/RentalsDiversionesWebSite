@@ -3,7 +3,7 @@
         <h1 class="title">¡Haz de tu Celebración un Evento Inolvidable!</h1>
         <p class="message">
             Haz que cada momento sea único! Descubre diversión y emoción con nuestra
-            <span>variedad de Brincolines</span>
+            <span> gran variedad de Brincolines y Mobiliario</span>
 
         </p>
     </div>

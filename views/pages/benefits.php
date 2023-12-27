@@ -1,5 +1,5 @@
 <section class="benefits-section contenedor">
-    <h1>¿Por qué elegir nuestros brincolines?</h1>
+    <h1>¿Por qué elegir Rental's y Diversiones?</h1>
     <div class="benefit">
         <picture class="benefit__img">
             <source srcset="/build/img/diversion.webp" type="image/webp">
@@ -13,13 +13,13 @@
 
     <div class="benefit">
         <picture class="benefit__img">
-            <source srcset="/build/img/edades.webp" type="image/webp">
-            <img loading="lazy" src="/build/img/edades.png" width="100" height="100" alt="icono edades" class="add__img-src">
+            <source srcset="/build/img/calidad.webp" type="image/webp">
+            <img loading="lazy" src="/build/img/calidad.png" width="100" height="100" alt="icono calidad" class="add__img-src">
         </picture>
-        <h2 class="benefit__title">Para Todas las Edades</h2>
+        <h2 class="benefit__title">Seguridad y Calidad, Siempre</h2>
         <p class="benefit__description">
-            Desde los más pequeños hasta los adultos, todos disfrutarán de la magia del brincolín.
-            Creamos momentos de diversión para cada miembro de la familia.
+            Garantizamos tu seguridad con brincolines de calidad y mobiliario resistente. Disfruta de tus eventos sin preocupaciones
+            gracias a nuestras opciones seguras y confiables
         </p>
     </div>
 
@@ -42,9 +42,10 @@
             <source srcset="/build/img/variedad.webp" type="image/webp">
             <img loading="lazy" src="/build/img/variedad.png" width="100" height="100" alt="icono variedad" class="add__img-src">
         </picture>
-        <h2 class="benefit__title">Variedad de Temas</h2>
+        <h2 class="benefit__title">Variedad Temática Inigualable</h2>
         <p class="benefit__description">
-            Tenemos el brincolín perfecto para tu temática. Personaliza tu evento con nuestra amplia gama de opciones.
+            Transforma tus celebraciones con nuestra variedad única de brincolines temáticos y mobiliario elegante.
+            Ofrecemos opciones vibrantes que harán que cada evento destaque.
         </p>
     </div>
 </section>
