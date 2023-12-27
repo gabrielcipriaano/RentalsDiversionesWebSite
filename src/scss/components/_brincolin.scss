@@ -1,0 +1,177 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.brincolin-details__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 3rem 0;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    .main-photo {
+        width: 45rem;
+        height: 50rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    @include m.desktop {
+        flex-direction: row;
+        justify-content: center;
+
+        .main-photo {
+            padding: 0;
+            border-radius: 1rem;
+            width: 45rem;
+            height: 60rem;
+        }
+    }
+
+
+    .brincolin-details__secondary-photos {
+        display: flex;
+        justify-content: space-around;
+
+        img {
+            width: 7rem;
+            height: 8rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            &.selected-photo {
+
+                filter: brightness(0.5);
+                transform: scale(1.2);
+            }
+        }
+
+        @include m.tablet {
+            img {
+                width: 15rem;
+                height: 17rem;
+            }
+
+            justify-content: space-evenly;
+
+
+        }
+    }
+
+    .brincolin-details__description {
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        .brincolin-details__content {
+            width: 100%;
+            margin-bottom: 3rem;
+
+            .brincolin-content__text {
+                text-align: start;
+                font-size: 1.8rem;
+                padding-right: 3rem;
+            }
+
+            .brincolin-details__title {
+                @extend .brincolin-content__text;
+                font-size: 3rem;
+                color: v.$verde;
+            }
+        }
+
+        @include m.tablet {
+            flex-direction: row;
+
+            .brincolin-details__content {
+                width: 60%;
+                margin-bottom: 0;
+
+            }
+        }
+
+        .brincolin-details__button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .button-redirect {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0.5rem 1.5rem;
+                background-color: v.$verde;
+                color: v.$blanco;
+                text-decoration: none;
+                border-radius: 0.5rem;
+                transition: background-color 0.3s;
+                font-size: 1.8rem;
+                font-weight: 700;
+                transition: transform 0.3s;
+
+
+                &:hover {
+                    background-color: darken(v.$verde, 10);
+                    transform: scale(1.2);
+                }
+
+                svg {
+                    width: 4rem;
+                    margin-right: 1rem;
+                }
+
+
+            }
+        }
+    }
+
+    .brincolin-details__information {
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
+
+        @include m.desktop {
+            flex-direction: column-reverse;
+            justify-content: space-evenly;
+            margin-top: 0;
+        }
+    }
+}
+
+.brincolin-details__video {
+    iframe {
+        width: 33rem;
+        height: 18rem;
+    }
+
+    @include m.telefono {
+        iframe {
+            width: 40rem;
+            height: 20rem;
+        }
+
+    }
+
+    @include m.tablet {
+        iframe {
+            width: 71rem;
+            height: 38rem;
+        }
+
+    }
+
+    @include m.tablet {
+        iframe {
+            width: 118rem;
+            height: 64rem;
+        }
+
+    }
+}

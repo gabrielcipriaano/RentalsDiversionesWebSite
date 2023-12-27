@@ -27,9 +27,21 @@ class PagesController
             'script' => $script
         ]);
     }
-    public static function gallery(Router $router)
+    public static function furniture(Router $router)
     {
-        $router->renderView('pages/listAdds', [
+        $router->renderView('pages/listFurniture', [
+            'main' => false
+        ]);
+    }
+    public static function brincolines(Router $router)
+    {
+        $router->renderView('pages/listBrincolines', [
+            'main' => false
+        ]);
+    }
+    public static function brincolin(Router $router)
+    {
+        $router->renderView('pages/brincolin', [
             'main' => false
         ]);
     }
