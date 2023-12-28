@@ -40,7 +40,7 @@ class Router
         }
 
         if (in_array($currentUrl, $protectedRoutes) && !$auth) {
-            header('Location: /');
+            header('Location: /login');
         }
 
 
