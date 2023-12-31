@@ -30,7 +30,9 @@ $router->get('/admin',[AdminController::class,'index']);
 $router->post('/admin',[AdminController::class,'index']);
 //brincolines
 $router->get('/admin-brincolines',[BrincolinesController::class,'brincolines']);
-$router->post('/admin-brincolines',[BrincolinesController::class,'brincolines']);
+$router->get('/admin-brincolines',[BrincolinesController::class,'brincolines']);
+$router->get('/admin-brincolines/create',[BrincolinesController::class,'create']);
+$router->post('/admin-brincolines/create',[BrincolinesController::class,'create']);
 
 // Check and validate the routes, ensuring they exist and assign them the functions of the Controller
 $router->checkRoutes();

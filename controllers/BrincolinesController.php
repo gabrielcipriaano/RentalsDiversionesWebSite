@@ -12,4 +12,10 @@ class BrincolinesController
             'main' => false
         ]);
     }
+    public static function create(Router $router)
+    {
+        $router->renderView('brincolines/create', [
+            'main' => false
+        ]);
+    }
 }
