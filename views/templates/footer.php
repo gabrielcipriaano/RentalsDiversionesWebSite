@@ -2,8 +2,8 @@
     <div class="footer-container contenedor">
         <div class="footer-logo">
             <picture>
-                <source srcset="/build/img/logo.webp" type="image/webp">
-                <img loading="lazy" src="/build/img/logo.jpg" width="100" height="100" alt="Logo Rental's y Diversiones">
+                <source srcset="/build/img/logo-black.webp" type="image/webp">
+                <img loading="lazy" src="/build/img/logo-black.jpg" width="100" height="100" alt="Logo Rental's y Diversiones">
             </picture>
 
             <p>

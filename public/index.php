@@ -2,6 +2,7 @@
 
 require_once __DIR__ . '/../includes/app.php';
 
+use Controllers\LoginController;
 use Controllers\PagesController;
 use MVC\Router;
 $router = new Router();
@@ -14,6 +15,13 @@ $router->get('/contact',[PagesController::class,'contact']);
 $router->get('/brincolin',[PagesController::class,'brincolin']);
 $router->get('/furniture',[PagesController::class,'furniture']);
 
+//Login
+$router->get('/login',[LoginController::class,'login']);
+$router->post('/login',[LoginController::class,'login']);
+$router->get('/recover',[LoginController::class,'recover']);
+$router->post('/recover',[LoginController::class,'recover']);
+$router->get('/reset',[LoginController::class,'reset']);
+$router->post('/reset',[LoginController::class,'reset']);
 
 // Check and validate the routes, ensuring they exist and assign them the functions of the Controller
 $router->checkRoutes();

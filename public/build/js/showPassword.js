@@ -1,0 +1,1 @@
+function togglePasswordVisibility(){const t=document.getElementById("password"),e=document.getElementById("togglePassword");e.addEventListener("click",(function(){"password"===t.type?(t.type="text",e.textContent="Ocultar"):(t.type="password",e.textContent="Mostrar")}))}document.addEventListener("DOMContentLoaded",(function(){togglePasswordVisibility()}));

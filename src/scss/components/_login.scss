@@ -1,0 +1,46 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.container-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1{
+        font-size: 3rem;
+        font-style: 700;
+        background-color: v.$blanco;
+        margin: 3rem 0;
+    }
+}
+
+.password-container {
+    position: relative;
+    width:100%;
+
+
+    #password {
+        width: 100%;
+        padding-right: 30px;
+
+    }
+
+    #togglePassword {
+        cursor: pointer;
+        user-select: none;
+        position: absolute;
+        right: 8px;
+        top: 73%;
+        transform: translateY(-50%);
+    }
+}
+
+.actions{
+    a{
+        color: v.$negro;
+        &:hover{
+            color: v.$sea-mist-700;
+        }
+    }
+}
