@@ -4,6 +4,7 @@ require_once __DIR__ . '/../includes/app.php';
 
 use MVC\Router;
 use Controllers\AdminController;
+use Controllers\BrincolinesController;
 use Controllers\LoginController;
 use Controllers\PagesController;
 $router = new Router();
@@ -27,6 +28,9 @@ $router->post('/reset',[LoginController::class,'reset']);
 //administration
 $router->get('/admin',[AdminController::class,'index']);
 $router->post('/admin',[AdminController::class,'index']);
+//brincolines
+$router->get('/admin-brincolines',[BrincolinesController::class,'brincolines']);
+$router->post('/admin-brincolines',[BrincolinesController::class,'brincolines']);
 
 // Check and validate the routes, ensuring they exist and assign them the functions of the Controller
 $router->checkRoutes();
