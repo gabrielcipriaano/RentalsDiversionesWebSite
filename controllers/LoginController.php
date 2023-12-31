@@ -20,7 +20,6 @@ class LoginController
                 $exist = Admin::where('email', $admin->email);
                 $passwordIsCorrect = $admin->auth($exist->password);
                 if ($exist && $passwordIsCorrect) {
-                    debuguear('admin...');
                     header('Location: /admin');
                 } else {
                     Admin::setAlert('error', 'Email o password incorrecto');

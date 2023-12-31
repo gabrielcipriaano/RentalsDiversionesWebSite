@@ -2,9 +2,10 @@
 
 require_once __DIR__ . '/../includes/app.php';
 
+use MVC\Router;
+use Controllers\AdminController;
 use Controllers\LoginController;
 use Controllers\PagesController;
-use MVC\Router;
 $router = new Router();
 
 // Main Page
@@ -22,6 +23,10 @@ $router->get('/recover',[LoginController::class,'recover']);
 $router->post('/recover',[LoginController::class,'recover']);
 $router->get('/reset',[LoginController::class,'reset']);
 $router->post('/reset',[LoginController::class,'reset']);
+
+//administration
+$router->get('/admin',[AdminController::class,'index']);
+$router->post('/admin',[AdminController::class,'index']);
 
 // Check and validate the routes, ensuring they exist and assign them the functions of the Controller
 $router->checkRoutes();
