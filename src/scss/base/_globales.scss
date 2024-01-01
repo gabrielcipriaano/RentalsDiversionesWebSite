@@ -58,8 +58,13 @@ img {
 
 .container-flex-center{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
+}
+
+.imagen-small{
+    width: 20rem;
 }
 

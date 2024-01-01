@@ -72,7 +72,7 @@ class ActiveRecord {
 
     // SQL for Advanced Queries
     public static function SQL($query) {
-        $result = self::querySQL($query);
+        $result = self::$db->query($query);
         return $result;
     }
 

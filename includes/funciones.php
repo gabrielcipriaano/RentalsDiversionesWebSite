@@ -1,6 +1,8 @@
 <?php
+define('IMAGES_FOLDER', $_SERVER['DOCUMENT_ROOT'] . "/uploads/");
 
-function debuguear($variable) : string {
+function debuguear($variable): string
+{
     echo "<pre>";
     var_dump($variable);
     echo "</pre>";
@@ -8,14 +10,16 @@ function debuguear($variable) : string {
 }
 
 // Escapa / Sanitizar el HTML
-function s($html) : string {
+function s($html): string
+{
     $s = htmlspecialchars($html);
     return $s;
 }
 
 // Función que revisa que el usuario este autenticado
-function isAuth() : void {
-    if(!isset($_SESSION['login'])) {
+function isAuth(): void
+{
+    if (!isset($_SESSION['login'])) {
         header('Location: /');
     }
 }

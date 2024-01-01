@@ -10,3 +10,5 @@ require 'database.php';
 
 // Conect to database
 ActiveRecord::setDB($db);
+
+

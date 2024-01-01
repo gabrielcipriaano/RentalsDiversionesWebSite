@@ -6,7 +6,7 @@
     <section class="container-flex-center">
         <?php include_once __DIR__ .  '/../templates/alerts.php'; ?>
 
-        <form action="/admin-brincolines/create" class="form" enctype="multipart/form-data">
+        <form action="/admin-brincolines/create" class="form" method="POST" enctype="multipart/form-data">
             <?php include_once 'form.php'; ?>
             <input type="submit" class="button-form" value="Crear">
         </form>
