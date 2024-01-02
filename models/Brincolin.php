@@ -77,18 +77,16 @@ class Brincolin extends ActiveRecord
             self::$alerts['error'][] = 'Ingresa el ancho del brincolín';
         }
 
-        if($this->video){
+        if ($this->video) {
             $pattern = '/(?<=v=)([a-zA-Z0-9_-]{11})/';
             preg_match($pattern, $this->video, $matches);
             if (isset($matches[1])) {
-                
+
                 $this->video = $matches[1];
-                
             } else {
                 $this->video = '';
                 self::$alerts['error'][] = 'El link del video no es correcto';
             }
-             
         }
 
         return  self::$alerts;
@@ -118,7 +116,30 @@ class Brincolin extends ActiveRecord
         }
     }
 
-    public function deleteImagen($image)
+    public function deletePhotos($images)
+    {
+        foreach ($images as $order) {
+            switch ($order) {
+                case 1:
+                    $this->deleteImage($this->photo1);
+                    break;
+                case 2:
+                    $this->deleteImage($this->photo2);
+                    break;
+                case 3:
+                    $this->deleteImage($this->photo3);
+                    break;
+                case 4:
+                    $this->deleteImage($this->photo4);
+                    break;
+                default:
+                    return;
+                    break;
+            }
+        }
+    }
+
+    public function deleteImage($image)
     {
         $fileExist = file_exists(IMAGES_FOLDER . $image);
         if ($fileExist) {

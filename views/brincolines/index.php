@@ -34,7 +34,7 @@
                         <td class="title"><?php echo $brincolin->name;?></td>
                         <td class="image"><img src="/uploads/<?php echo $brincolin->photo1;?>" alt="Foto de Brincolín"></td>
                         <td class="actions">
-                            <a title="Editar" href="/brincolines/create?id=<?php echo $brincolin->id;?>">
+                            <a title="Editar" href="/admin-brincolines/update?id=<?php echo $brincolin->id;?>">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit" width="60" height="60" viewBox="0 0 24 24" stroke-width="1.5" stroke="#009988" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                     <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />

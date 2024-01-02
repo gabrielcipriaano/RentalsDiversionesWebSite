@@ -74,4 +74,70 @@ class BrincolinesController
             'brincolin' => $brincolin
         ]);
     }
+
+    public static function update(Router $router)
+    {
+        $alerts = [];
+        $_GET['id'] ? $id = s($_GET['id']) : header('Location: /admin-brincolines');
+        $brincolin = new Brincolin();
+        $brincolin = Brincolin::where('id', $id);
+
+        if (!$brincolin) {
+            header('Location: /admin-brincolines');
+        }
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $imagesUploaded = [];
+            $brincolin->sync($_POST);
+            if (!is_dir(IMAGES_FOLDER)) {
+                mkdir(IMAGES_FOLDER);
+            }
+
+            $allowedExtensions = ['jpg', 'jpeg', 'png'];
+            $maxFileSize = 1.5 * 1024 * 1024;
+
+            for ($i = 1; $i <= 4; $i++) {
+                if (isset($_FILES["photo$i"]) && $_FILES["photo$i"]["error"] == UPLOAD_ERR_OK) {
+                    $fileTmpPath = $_FILES["photo$i"]['tmp_name'];
+                    $fileSize = $_FILES["photo$i"]['size'];
+                    list($width, $height, $fileType) = getimagesize($fileTmpPath);
+
+                    if ($fileType === false || !in_array(image_type_to_extension($fileType, false), $allowedExtensions)) {
+                        Brincolin::setAlert('error', "La Foto $i no es una imagen válida (jpg, jpeg o png).");
+                    } elseif ($fileSize > $maxFileSize) {
+                        Brincolin::setAlert('error', "La Foto $i excede el tamaño máximo permitido de 1.5 MB.");
+                    } else {
+                        $imagesUploaded [] = $i;
+                    }
+                } 
+            }
+
+            $alerts = $brincolin->validate();
+            
+            if (empty($alerts)) {
+                
+                $brincolin->deletePhotos($imagesUploaded);
+                foreach ($imagesUploaded as $i) {
+                    if (isset($_FILES["photo$i"]) && $_FILES["photo$i"]["error"] == UPLOAD_ERR_OK) {
+                        $image = Image::make($_FILES["photo$i"]['tmp_name'])->fit(347, 450);
+
+                        $imageName = md5(uniqid(rand(), true)) . ".jpg";
+                        $brincolin->setImage($imageName, $i);
+                        $image->encode('jpg', 80)->save(IMAGES_FOLDER . $imageName);
+                    }
+                }
+                $brincolin->save() ? header('Location: /admin-brincolines?result=2') : die();
+            }
+
+            $alerts = Brincolin::getAlerts();
+        }
+
+
+
+        $router->renderView('brincolines/update', [
+            'main' => false,
+            'alerts' => $alerts,
+            'brincolin' => $brincolin
+        ]);
+    }
 }
