@@ -78,18 +78,28 @@ class Brincolin extends ActiveRecord
         }
 
         if ($this->video) {
-            $pattern = '/(?<=v=)([a-zA-Z0-9_-]{11})/';
-            preg_match($pattern, $this->video, $matches);
-            if (isset($matches[1])) {
-
-                $this->video = $matches[1];
-            } else {
-                $this->video = '';
+            $pattern = '/^(https?:\/\/)?(www\.)?(youtube\.com\/(watch\?v=|embed\/|v\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/';
+            
+            if (!preg_match($pattern, $this->video)) {
                 self::$alerts['error'][] = 'El link del video no es correcto';
             }
         }
 
         return  self::$alerts;
+    }
+
+    public function getIDVideo()
+    {
+        if ($this->video) {
+            $pattern = '/(?<=v=)([a-zA-Z0-9_-]{11})/';
+            preg_match($pattern, $this->video, $matches);
+            if (isset($matches[1])) {
+
+                return $matches[1];
+            }
+        }
+
+        return '';
     }
 
     public function setImage($image, $order)

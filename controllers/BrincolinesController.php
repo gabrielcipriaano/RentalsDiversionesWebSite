@@ -81,7 +81,7 @@ class BrincolinesController
         $_GET['id'] ? $id = s($_GET['id']) : header('Location: /admin-brincolines');
         $brincolin = new Brincolin();
         $brincolin = Brincolin::where('id', $id);
-
+        
         if (!$brincolin) {
             header('Location: /admin-brincolines');
         }
