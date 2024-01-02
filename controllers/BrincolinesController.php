@@ -81,7 +81,7 @@ class BrincolinesController
         $_GET['id'] ? $id = s($_GET['id']) : header('Location: /admin-brincolines');
         $brincolin = new Brincolin();
         $brincolin = Brincolin::where('id', $id);
-        
+
         if (!$brincolin) {
             header('Location: /admin-brincolines');
         }
@@ -107,15 +107,15 @@ class BrincolinesController
                     } elseif ($fileSize > $maxFileSize) {
                         Brincolin::setAlert('error', "La Foto $i excede el tamaño máximo permitido de 1.5 MB.");
                     } else {
-                        $imagesUploaded [] = $i;
+                        $imagesUploaded[] = $i;
                     }
-                } 
+                }
             }
 
             $alerts = $brincolin->validate();
-            
+
             if (empty($alerts)) {
-                
+
                 $brincolin->deletePhotos($imagesUploaded);
                 foreach ($imagesUploaded as $i) {
                     if (isset($_FILES["photo$i"]) && $_FILES["photo$i"]["error"] == UPLOAD_ERR_OK) {
@@ -139,5 +139,24 @@ class BrincolinesController
             'alerts' => $alerts,
             'brincolin' => $brincolin
         ]);
+    }
+
+    public static function delete()
+    {
+
+        filter_var($_POST['id'], FILTER_VALIDATE_INT) && $_POST['id']
+            ? $id = s($_POST['id']) : header('Location: /admin-brincolines');
+
+        $brincolin = Brincolin::where('id', $id);
+
+        if (!$brincolin) {
+            header('Location: /admin-brincolines');
+        }
+
+        if ($brincolin->delete()) {
+            $images = [1, 2, 3, 4];
+            $brincolin->deletePhotos($images);
+            header('Location: /admin-brincolines?result=3');
+        }
     }
 }

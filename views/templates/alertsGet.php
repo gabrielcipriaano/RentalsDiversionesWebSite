@@ -12,6 +12,12 @@ switch ($message) {
 
     ?>
         <div class="alert success w-100">Brincolín Actualizado Correctamente</div>;
+    <?php
+        break;
+    case 3:
+
+    ?>
+        <div class="alert success w-100">Brincolín Eliminado Correctamente</div>;
 <?php
         break;
     default:
