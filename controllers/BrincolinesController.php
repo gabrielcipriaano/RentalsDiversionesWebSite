@@ -17,7 +17,7 @@ class BrincolinesController
         ]);
     }
     public static function create(Router $router)
-    {   ini_set('memory_limit', '256M'); 
+    {   ini_set('memory_limit', '512M'); 
         $brincolin = new Brincolin();
         $alerts = [];
 
@@ -43,7 +43,7 @@ class BrincolinesController
 
 
             $alerts = $brincolin->validate();
-            //debuguear($brincolin);
+            
             if (empty($alerts) && $imagesUploaded === 4) {
                 for ($i = 1; $i <= 4; $i++) {
                     if (isset($_FILES["photo$i"]) && $_FILES["photo$i"]["error"] == UPLOAD_ERR_OK) {
@@ -55,7 +55,9 @@ class BrincolinesController
                         
                     }
                 }
-                $brincolin->save();
+                $brincolin->save() ? header('Location: /admin-brincolines?result=1') : die();
+
+                
             }
 
             $alerts = Brincolin::getAlerts();

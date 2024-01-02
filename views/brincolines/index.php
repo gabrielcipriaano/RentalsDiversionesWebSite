@@ -19,6 +19,7 @@
             Agregar Nuevo Brincolín</a>
     </section>
     <section class="brincolines">
+        <?php include_once __DIR__ . '/../templates/alertsGet.php'; ?>
         <table>
             <thead>
                 <tr>
@@ -28,23 +29,24 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td class="title">Brincolín 2 motorizado xd </td>
-                    <td class="image"><img src="/build/img/bob.jpeg" alt="Brincolín 2"></td>
-                    <td class="actions">
-                        <a href="/brincolines/create">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit" width="60" height="60" viewBox="0 0 24 24" stroke-width="1.5" stroke="#009988" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
-                                <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
-                                <path d="M16 5l3 3" />
-                            </svg>
-                        </a>
+                <?php foreach ($brincolines as $brincolin) : ?>
+                    <tr>
+                        <td class="title"><?php echo $brincolin->name;?></td>
+                        <td class="image"><img src="/uploads/<?php echo $brincolin->photo1;?>" alt="Foto de Brincolín"></td>
+                        <td class="actions">
+                            <a title="Editar" href="/brincolines/create?id=<?php echo $brincolin->id;?>">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit" width="60" height="60" viewBox="0 0 24 24" stroke-width="1.5" stroke="#009988" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1" />
+                                    <path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415z" />
+                                    <path d="M16 5l3 3" />
+                                </svg>
+                            </a>
 
-                        <!-- <form action="/brincolines/delete" method="post"> -->
+                            <!-- <form action="/brincolines/delete" method="post"> -->
 
-                            <!-- <input type="hidden" name="id" value="tu_valor" /> -->
-                            <button class="icon-button">
+                            <!-- <input type="hidden" name="id" value="<?php echo $brincolin->id;?>" /> -->
+                            <button title="Eliminar" class="icon-button">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="60" height="60" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff2825" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                     <path d="M4 7l16 0" />
@@ -54,10 +56,11 @@
                                     <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
                                 </svg>
                             </button>
-                        <!-- </form> -->
-                    </td>
-                </tr>
-                <!-- Agrega más filas según sea necesario -->
+                            <!-- </form> -->
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+
             </tbody>
         </table>
     </section>
