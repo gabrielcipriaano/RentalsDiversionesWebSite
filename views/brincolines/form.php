@@ -22,6 +22,15 @@
 </fieldset>
 
 <fieldset>
+    <legend>
+        Video
+    </legend>
+
+    <label for="video">Link de Video:</label>
+    <input type="text" placeholder="eje :https://www.youtube.com/watch?v=T8SspHdfpoM" id="video" name="video"  value="<?php echo $brincolin->video; ?>">
+</fieldset>
+
+<fieldset>
     <legend>Fotos</legend>
     <?php if ($brincolin->photo1) { ?>
         <img src="/uploads/<?php echo $brincolin->photo1; ?>" alt="Imagen de brincolin" class="imagen-small">

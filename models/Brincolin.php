@@ -17,6 +17,7 @@ class Brincolin extends ActiveRecord
         'photo2',
         'photo3',
         'photo4',
+        'video'
     ];
 
     public $id;
@@ -30,6 +31,7 @@ class Brincolin extends ActiveRecord
     public $photo2;
     public $photo3;
     public $photo4;
+    public $video;
 
 
     public function __construct($args = [])
@@ -45,6 +47,7 @@ class Brincolin extends ActiveRecord
         $this->photo2 = $args['photo2'] ?? '';
         $this->photo3 = $args['photo3'] ?? '';
         $this->photo4 = $args['photo4'] ?? '';
+        $this->photo4 = $args['video'] ?? '';
     }
 
 
@@ -72,6 +75,20 @@ class Brincolin extends ActiveRecord
 
         if (!$this->width) {
             self::$alerts['error'][] = 'Ingresa el ancho del brincolín';
+        }
+
+        if($this->video){
+            $pattern = '/(?<=v=)([a-zA-Z0-9_-]{11})/';
+            preg_match($pattern, $this->video, $matches);
+            if (isset($matches[1])) {
+                
+                $this->video = $matches[1];
+                
+            } else {
+                $this->video = '';
+                self::$alerts['error'][] = 'El link del video no es correcto';
+            }
+             
         }
 
         return  self::$alerts;
