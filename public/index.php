@@ -36,6 +36,8 @@ $router->post('/admin-brincolines/create',[BrincolinesController::class,'create'
 $router->get('/admin-brincolines/update',[BrincolinesController::class,'update']);
 $router->post('/admin-brincolines/update',[BrincolinesController::class,'update']);
 $router->post('/admin-brincolines/delete',[BrincolinesController::class,'delete']);
+$router->get('/admin-brincolines/find',[BrincolinesController::class,'find']);
+$router->post('/admin-brincolines/find',[BrincolinesController::class,'find']);
 
 // Check and validate the routes, ensuring they exist and assign them the functions of the Controller
 $router->checkRoutes();

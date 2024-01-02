@@ -13,7 +13,8 @@ class BrincolinesController
         $brincolines = Brincolin::all();
         $router->renderView('brincolines/index', [
             'main' => false,
-            'brincolines' => $brincolines
+            'brincolines' => $brincolines,
+            'find' => false
         ]);
     }
     public static function create(Router $router)
@@ -158,5 +159,18 @@ class BrincolinesController
             $brincolin->deletePhotos($images);
             header('Location: /admin-brincolines?result=3');
         }
+    }
+
+    public static function find(Router $router)
+    {   
+        $brincolines = null;
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['brincolin']) {
+            $brincolines = Brincolin::search($_POST['brincolin']);
+        }
+        $router->renderView('brincolines/index', [
+            'main' => false,
+            'brincolines' => $brincolines,
+            'find' => true
+        ]);
     }
 }
