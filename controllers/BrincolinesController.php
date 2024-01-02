@@ -17,7 +17,8 @@ class BrincolinesController
         ]);
     }
     public static function create(Router $router)
-    {   ini_set('memory_limit', '512M'); 
+    {
+        ini_set('memory_limit', '512M');
         $brincolin = new Brincolin();
         $alerts = [];
 
@@ -28,22 +29,30 @@ class BrincolinesController
                 mkdir(IMAGES_FOLDER);
             }
 
+            $allowedExtensions = ['jpg', 'jpeg', 'png'];
             $maxFileSize = 1.5 * 1024 * 1024;
+
             for ($i = 1; $i <= 4; $i++) {
                 if (isset($_FILES["photo$i"]) && $_FILES["photo$i"]["error"] == UPLOAD_ERR_OK) {
-                    if ($_FILES["photo$i"]['tmp_name'] && $_FILES["photo$i"]['size'] <= $maxFileSize) {
+                    $fileTmpPath = $_FILES["photo$i"]['tmp_name'];
+                    $fileSize = $_FILES["photo$i"]['size'];
+                    list($width, $height, $fileType) = getimagesize($fileTmpPath);
+
+                    if ($fileType === false || !in_array(image_type_to_extension($fileType, false), $allowedExtensions)) {
+                        Brincolin::setAlert('error', "La Foto $i no es una imagen válida (jpg, jpeg o png).");
+                    } elseif ($fileSize > $maxFileSize) {
+                        Brincolin::setAlert('error', "La Foto $i excede el tamaño máximo permitido de 1.5 MB.");
+                    } else {
                         $imagesUploaded++;
-                    }else {
-                        Brincolin::setAlert('error', "La Foto $i excede el tamaño máximo permitido de 1.5 MB");
                     }
                 } else {
-                    Brincolin::setAlert('error', "La Foto $i es obligatoria");
+                    Brincolin::setAlert('error', "La Foto $i es obligatoria.");
                 }
             }
 
 
             $alerts = $brincolin->validate();
-            
+
             if (empty($alerts) && $imagesUploaded === 4) {
                 for ($i = 1; $i <= 4; $i++) {
                     if (isset($_FILES["photo$i"]) && $_FILES["photo$i"]["error"] == UPLOAD_ERR_OK) {
@@ -52,12 +61,9 @@ class BrincolinesController
                         $imageName = md5(uniqid(rand(), true)) . ".jpg";
                         $brincolin->setImage($imageName, $i);
                         $image->encode('jpg', 80)->save(IMAGES_FOLDER . $imageName);
-                        
                     }
                 }
                 $brincolin->save() ? header('Location: /admin-brincolines?result=1') : die();
-
-                
             }
 
             $alerts = Brincolin::getAlerts();
