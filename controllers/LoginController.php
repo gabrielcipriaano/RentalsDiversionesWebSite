@@ -20,6 +20,9 @@ class LoginController
                 $exist = Admin::where('email', $admin->email);
                 $passwordIsCorrect = $admin->auth($exist->password);
                 if ($exist && $passwordIsCorrect) {
+                    session_start();
+                    $_SESSION['login'] = true;
+                    $_SESSION['name'] = $admin->name;
                     header('Location: /admin');
                 } else {
                     Admin::setAlert('error', 'Email o password incorrecto');
@@ -96,5 +99,15 @@ class LoginController
             'token' => $token
 
         ]);
+    }
+
+    public static function logout(Router $router)
+    {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        $_SESSION = [];
+        header('Location: /');
     }
 }

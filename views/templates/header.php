@@ -15,9 +15,11 @@
             <a href="/about">Nosotros</a>
         </div>
 
-        <!-- <a class="logout" href="/logout">
-            Cerrar Sesión
-        </a> -->
+        <?php if ($_SESSION['login']) : ?>
 
+            <a class="logout" href="/logout">
+                Cerrar Sesión
+            </a>
+        <?php endif; ?>
     </nav>
 </header>

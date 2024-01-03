@@ -26,6 +26,7 @@ $router->get('/recover',[LoginController::class,'recover']);
 $router->post('/recover',[LoginController::class,'recover']);
 $router->get('/reset',[LoginController::class,'reset']);
 $router->post('/reset',[LoginController::class,'reset']);
+$router->get('/logout',[LoginController::class,'logout']);
 
 //administration
 $router->get('/admin',[AdminController::class,'index']);
