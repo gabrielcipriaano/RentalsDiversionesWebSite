@@ -11,7 +11,7 @@ function conditionalSubmit() {
       const form = deleteButton.closest("form");
 
       Swal.fire({
-        title: "¿Estás seguro de que deseas eliminar el brincolín?",
+        title: "¿Estás seguro de que deseas eliminar el registro?",
         text: "No podrás revertir esta acción",
         icon: "warning",
         showCancelButton: true,
