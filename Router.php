@@ -31,6 +31,17 @@ class Router
         $method = $_SERVER['REQUEST_METHOD'];
         $protectedRoutes = [
            // add here routes that you want to protect
+           '/admin',
+           '/admin-brincolines',
+           '/admin-brincolines/create',
+           '/admin-brincolines/update',
+           '/admin-brincolines/delete',
+           '/admin-brincolines/find',
+           '/admin-furniture',
+           '/admin-furniture/create',
+           '/admin-furniture/update',
+           '/admin-furniture/delete',
+           '/admin-furniture/find',
         ];
 
         if ($method === 'GET') {
