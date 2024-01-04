@@ -67,7 +67,7 @@ class ActiveRecord {
     public static function get($limit) {
         $query = "SELECT * FROM " . static::$table . " LIMIT $limit";
         $result = self::querySQL($query);
-        return array_shift($result);
+        return $result;
     }
 
     // Search Where with Column

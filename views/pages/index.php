@@ -25,7 +25,7 @@
 
 
 
-<?php include_once 'listBrincolines.php'; ?>
-<?php include_once 'listFurniture.php'; ?>
-<?php include_once 'contactSection.php'; ?>
-<?php include_once 'benefits.php'; ?>
+<?php include 'listBrincolines.php'; ?>
+<?php include 'listFurniture.php'; ?>
+<?php include 'contactSection.php'; ?>
+<?php include 'benefits.php'; ?>
