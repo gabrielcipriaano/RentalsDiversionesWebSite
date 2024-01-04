@@ -6,19 +6,19 @@
 
     <div class="contact__actions">
         <div class="contact__icons-container">
-            <a href="">
+            <a target="_blank" href="https://www.facebook.com/profile.php?id=61553762250571">
                 <picture class="contact__icon">
                     <source srcset="/build/img/facebook.webp" type="image/webp">
                     <img loading="lazy" src="/build/img/facebook.png" width="50" height="50" alt="icono facebook" class="add__img-src">
                 </picture>
             </a>
-            <a href="">
+            <a target="_blank" href="https://wa.me/3541107510">
                 <picture class="contact__icon">
                     <source srcset="/build/img/whatsapp.webp" type="image/webp">
                     <img loading="lazy" src="/build/img/whatsapp.png" width="50" height="50" alt="icono whatsapp" class="add__img-src">
                 </picture>
             </a>
-            <a href="">
+            <a target="_blank" href="tel:+3541107510">
                 <picture class="contact__icon">
                     <source srcset="/build/img/telefono.webp" type="image/webp">
                     <img loading="lazy" src="/build/img/telefono.png" width="50" height="50" alt="icono telefono" class="add__img-src">

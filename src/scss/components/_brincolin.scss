@@ -48,14 +48,15 @@
             &.selected-photo {
 
                 filter: brightness(0.5);
-                transform: scale(1.2);
+                transform: scale(1.1);
             }
         }
 
         @include m.tablet {
             img {
-                width: 15rem;
-                height: 17rem;
+                width: 12rem;
+                height: 14rem;
+                margin:0 3rem;
             }
 
             justify-content: space-evenly;
@@ -84,6 +85,7 @@
                 @extend .brincolin-content__text;
                 font-size: 3rem;
                 color: v.$verde;
+                text-transform: uppercase;
             }
         }
 

@@ -13,16 +13,17 @@
         <div class="right">
             <div class="footer-links">
                 <h3>Rental's y Diversiones&trade;</h3>
-                <a href="/gallery">Galeria</a>
+                <a href="/brincolines">Brincolínes</a>
+                <a href="/furnitures">Mobilirario</a>
                 <a href="/contact">Contacto</a>
                 <a href="/about">Nosotros</a>
             </div>
 
             <div class="footer-social">
                 <h3>Redes Sociales</h3>
-                <a href="#">Facebook</a>
-                <a href="#">Youtube</a>
-                <a href="#">Whatsapp</a>
+                <a target="_blank" href="https://www.facebook.com/profile.php?id=61553762250571">Facebook</a>
+                <a target="_blank" href="#">Youtube</a>
+                <a target="_blank" href="https://wa.me/3541107510">Whatsapp</a>
             </div>
             <div class="footer-attributions">
                 <h3>Atribuciones</h3>
