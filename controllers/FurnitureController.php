@@ -57,7 +57,9 @@ class FurnitureController
             if (empty($alerts) && $imagesUploaded === 4) {
                 for ($i = 1; $i <= 4; $i++) {
                     if (isset($_FILES["photo$i"]) && $_FILES["photo$i"]["error"] == UPLOAD_ERR_OK) {
-                        $image = Image::make($_FILES["photo$i"]['tmp_name'])->fit(347, 450);
+                        $image = Image::make($_FILES["photo$i"]['tmp_name'])->resize(null, 450, function ($constraint) {
+                            $constraint->aspectRatio();
+                        });
 
                         $imageName = md5(uniqid(rand(), true)) . ".jpg";
                         $furniture->setImage($imageName, $i);
@@ -120,7 +122,9 @@ class FurnitureController
                 $furniture->deletePhotos($imagesUploaded);
                 foreach ($imagesUploaded as $i) {
                     if (isset($_FILES["photo$i"]) && $_FILES["photo$i"]["error"] == UPLOAD_ERR_OK) {
-                        $image = Image::make($_FILES["photo$i"]['tmp_name'])->fit(347, 450);
+                        $image = Image::make($_FILES["photo$i"]['tmp_name'])->resize(null, 450, function ($constraint) {
+                            $constraint->aspectRatio();
+                        });
 
                         $imageName = md5(uniqid(rand(), true)) . ".jpg";
                         $furniture->setImage($imageName, $i);
