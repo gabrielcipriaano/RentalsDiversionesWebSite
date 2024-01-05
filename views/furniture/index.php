@@ -19,7 +19,7 @@
             Agregar Mobiliario</a>
     </section>
     <section class="brincolines">
-        <?php include_once __DIR__ . '/../templates/alertsGet.php'; ?>
+        <?php include_once __DIR__ . '/../templates/alertsGet.php';?>
 
         <?php if ($furnitures) { ?>
             <table>

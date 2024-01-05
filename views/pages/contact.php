@@ -27,7 +27,7 @@
                 </picture>
                 <h2 class="contact-socials__label">3541107510</h2>
             </a>
-            <a target="_blank" href="tel:+3541107510" class="contact-socials__item">
+            <a target="_blank" href="tel:3541107510" class="contact-socials__item">
                 <picture class="contact-socials__img">
                     <source srcset="/build/img/telefono.webp" type="image/webp">
                     <img loading="lazy" src="/build/img/telefono.png" width="100" height="100" alt="icono teléfono">

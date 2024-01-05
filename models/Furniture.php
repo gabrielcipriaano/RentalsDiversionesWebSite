@@ -105,4 +105,9 @@ class Furniture extends ActiveRecord
             unlink(IMAGES_FOLDER . $image);
         }
     }
+
+    public function getShortDesctiption()
+    {
+        return strlen($this->description) > 85 ? substr($this->description, 0, 85) . "..." : $this->description;
+    }
 }

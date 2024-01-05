@@ -22,7 +22,6 @@ class BrincolinesController
         ini_set('memory_limit', '512M');
         $brincolin = new Brincolin();
         $alerts = [];
-
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $imagesUploaded = 0;
             $brincolin->sync($_POST);
@@ -31,7 +30,7 @@ class BrincolinesController
             }
 
             $allowedExtensions = ['jpg', 'jpeg', 'png'];
-            $maxFileSize = 1.5 * 1024 * 1024;
+            $maxFileSize = 2.4 * 1024 * 1024;
 
             for ($i = 1; $i <= 4; $i++) {
                 if (isset($_FILES["photo$i"]) && $_FILES["photo$i"]["error"] == UPLOAD_ERR_OK) {
@@ -42,7 +41,7 @@ class BrincolinesController
                     if ($fileType === false || !in_array(image_type_to_extension($fileType, false), $allowedExtensions)) {
                         Brincolin::setAlert('error', "La Foto $i no es una imagen válida (jpg, jpeg o png).");
                     } elseif ($fileSize > $maxFileSize) {
-                        Brincolin::setAlert('error', "La Foto $i excede el tamaño máximo permitido de 1.5 MB.");
+                        Brincolin::setAlert('error', "La Foto $i excede el tamaño máximo permitido de 2.4 MB.");
                     } else {
                         $imagesUploaded++;
                     }
@@ -97,7 +96,7 @@ class BrincolinesController
             }
 
             $allowedExtensions = ['jpg', 'jpeg', 'png'];
-            $maxFileSize = 1.5 * 1024 * 1024;
+            $maxFileSize = 2.4 * 1024 * 1024;
 
             for ($i = 1; $i <= 4; $i++) {
                 if (isset($_FILES["photo$i"]) && $_FILES["photo$i"]["error"] == UPLOAD_ERR_OK) {
@@ -108,7 +107,7 @@ class BrincolinesController
                     if ($fileType === false || !in_array(image_type_to_extension($fileType, false), $allowedExtensions)) {
                         Brincolin::setAlert('error', "La Foto $i no es una imagen válida (jpg, jpeg o png).");
                     } elseif ($fileSize > $maxFileSize) {
-                        Brincolin::setAlert('error', "La Foto $i excede el tamaño máximo permitido de 1.5 MB.");
+                        Brincolin::setAlert('error', "La Foto $i excede el tamaño máximo permitido de 2.4 MB.");
                     } else {
                         $imagesUploaded[] = $i;
                     }

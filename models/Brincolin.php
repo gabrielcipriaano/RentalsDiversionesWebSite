@@ -79,7 +79,7 @@ class Brincolin extends ActiveRecord
 
         if ($this->video) {
             $pattern = '/^(https?:\/\/)?(www\.)?(youtube\.com\/(watch\?v=|embed\/|v\/)|youtu\.be\/)([a-zA-Z0-9_-]{11})/';
-            
+
             if (!preg_match($pattern, $this->video)) {
                 self::$alerts['error'][] = 'El link del video no es correcto';
             }
@@ -96,8 +96,7 @@ class Brincolin extends ActiveRecord
             if (isset($matches[1])) {
 
                 return $matches[1];
-            }
-            else{
+            } else {
                 return '';
             }
         }
@@ -156,5 +155,10 @@ class Brincolin extends ActiveRecord
         if ($fileExist) {
             unlink(IMAGES_FOLDER . $image);
         }
+    }
+
+    public function getShortDesctiption()
+    {
+        return strlen($this->description) > 85 ? substr($this->description, 0, 85) . "..." : $this->description;
     }
 }

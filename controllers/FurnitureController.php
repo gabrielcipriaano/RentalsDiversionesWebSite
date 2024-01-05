@@ -31,7 +31,7 @@ class FurnitureController
             }
 
             $allowedExtensions = ['jpg', 'jpeg', 'png'];
-            $maxFileSize = 1.5 * 1024 * 1024;
+            $maxFileSize = 2.4 * 1024 * 1024;
 
             for ($i = 1; $i <= 4; $i++) {
                 if (isset($_FILES["photo$i"]) && $_FILES["photo$i"]["error"] == UPLOAD_ERR_OK) {
@@ -42,7 +42,7 @@ class FurnitureController
                     if ($fileType === false || !in_array(image_type_to_extension($fileType, false), $allowedExtensions)) {
                         furniture::setAlert('error', "La Foto $i no es una imagen válida (jpg, jpeg o png).");
                     } elseif ($fileSize > $maxFileSize) {
-                        furniture::setAlert('error', "La Foto $i excede el tamaño máximo permitido de 1.5 MB.");
+                        furniture::setAlert('error', "La Foto $i excede el tamaño máximo permitido de 2.4 MB.");
                     } else {
                         $imagesUploaded++;
                     }
@@ -97,7 +97,7 @@ class FurnitureController
             }
 
             $allowedExtensions = ['jpg', 'jpeg', 'png'];
-            $maxFileSize = 1.5 * 1024 * 1024;
+            $maxFileSize = 2.4 * 1024 * 1024;
 
             for ($i = 1; $i <= 4; $i++) {
                 if (isset($_FILES["photo$i"]) && $_FILES["photo$i"]["error"] == UPLOAD_ERR_OK) {
@@ -108,7 +108,7 @@ class FurnitureController
                     if ($fileType === false || !in_array(image_type_to_extension($fileType, false), $allowedExtensions)) {
                         furniture::setAlert('error', "La Foto $i no es una imagen válida (jpg, jpeg o png).");
                     } elseif ($fileSize > $maxFileSize) {
-                        furniture::setAlert('error', "La Foto $i excede el tamaño máximo permitido de 1.5 MB.");
+                        furniture::setAlert('error', "La Foto $i excede el tamaño máximo permitido de 2.4 MB.");
                     } else {
                         $imagesUploaded[] = $i;
                     }
