@@ -16,7 +16,9 @@ $router->get('/',[PagesController::class,'index']);
 $router->get('/brincolines',[PagesController::class,'brincolines']);
 $router->get('/about',[PagesController::class,'about']);
 $router->get('/contact',[PagesController::class,'contact']);
+$router->post('/contact',[PagesController::class,'contact']);
 $router->get('/brincolin',[PagesController::class,'brincolin']);
+$router->get('/furnitures',[PagesController::class,'furnitures']);
 $router->get('/furniture',[PagesController::class,'furniture']);
 
 //Login

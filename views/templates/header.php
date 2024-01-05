@@ -10,7 +10,7 @@
     <nav class="navegation">
         <div class="menu-nav">
             <a href="/brincolines">Brincolínes</a>
-            <a href="/furniture">Mobilirario</a>
+            <a href="/furnitures">Mobilirario</a>
             <a href="/contact">Contacto</a>
             <a href="/about">Nosotros</a>
         </div>

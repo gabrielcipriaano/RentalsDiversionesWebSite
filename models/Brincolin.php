@@ -97,9 +97,10 @@ class Brincolin extends ActiveRecord
 
                 return $matches[1];
             }
+            else{
+                return '';
+            }
         }
-
-        return '';
     }
 
     public function setImage($image, $order)

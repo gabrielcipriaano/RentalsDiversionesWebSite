@@ -2,25 +2,20 @@
     <section class="brincolin-details">
         <div class="brincolin-details__card">
 
-            <img class="main-photo" src="/uploads/<?php echo $brincolin->photo1;?>" alt="Brincolín 1 - Foto 1">
+            <img class="main-photo" src="/uploads/<?php echo $furniture->photo1;?>" alt="Brincolín 1 - Foto 1">
             <div class="brincolin-details__information">
                 <div class="brincolin-details__secondary-photos">
-                    <img class="secondary-photo selected-photo" src="/uploads/<?php echo $brincolin->photo1;?>" alt="Brincolín 1 - Foto 1">
-                    <img class="secondary-photo" src="/uploads/<?php echo $brincolin->photo2;?>" alt="Brincolín 1 - Foto 2">
-                    <img class="secondary-photo" src="/uploads/<?php echo $brincolin->photo3;?>" alt="Brincolín 1 - Foto 3">
-                    <img class="secondary-photo" src="/uploads/<?php echo $brincolin->photo4;?>" alt="Brincolín 1 - Foto 4">
+                    <img class="secondary-photo selected-photo" src="/uploads/<?php echo $furniture->photo1;?>" alt="Brincolín 1 - Foto 1">
+                    <img class="secondary-photo" src="/uploads/<?php echo $furniture->photo2;?>" alt="Brincolín 1 - Foto 2">
+                    <img class="secondary-photo" src="/uploads/<?php echo $furniture->photo3;?>" alt="Brincolín 1 - Foto 3">
+                    <img class="secondary-photo" src="/uploads/<?php echo $furniture->photo4;?>" alt="Brincolín 1 - Foto 4">
                 </div>
 
                 <div class="brincolin-details__description">
                     <div class="brincolin-details__content">
-                        <h1 class="brincolin-details__title"><?php echo $brincolin->name;?></h1>
-                        <p class="brincolin-content__text"><strong>Dimensiones:</strong> 
-                        <?php echo $brincolin->length;?>m Largo x 
-                        <?php echo $brincolin->height;?>m Alto x 
-                        <?php echo $brincolin->width;?>m Ancho</p>
+                        <h1 class="brincolin-details__title"><?php echo $furniture->name;?></h1>
                         <p class="brincolin-content__text"><strong>Descripción:</strong>
-                         <br> <?php echo $brincolin->description;?></p>
-                        <p class="brincolin-content__text"><strong>Capacidad:</strong><?php echo $brincolin->capacity;?></p>
+                         <br> <?php echo $furniture->description;?></p>
                     </div>
 
                     <div class="brincolin-details__button">
@@ -39,15 +34,6 @@
                 </div>
             </div>
         </div>
-        <?php if($brincolin->video): ?>
-            <div class="brincolin-details__video">
-                <iframe id="youtube-iframe" width="640" height="360" 
-                        src="https://www.youtube.com/embed/<?php echo $brincolin->getIDVideo();?>"
-                        frameborder="0" allowfullscreen></iframe>
-            </div>
-        <?php endif;?>
-
-
 
     </section>
 </main>

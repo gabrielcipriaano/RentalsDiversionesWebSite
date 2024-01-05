@@ -1,6 +1,8 @@
 <main class="contenedor page-contact">
     <h1 class="page-contact__title">¡Hablemos de Diversión! Contacta con Nosotros</h1>
-
+    <?php if ($message) {
+            echo $message;
+        } ?>
     <div class="form-container">
         <div class="contact-socials">
             <h2 class="contact-socials__title">
@@ -11,21 +13,21 @@
                 llamada o llena el formulario y te responderemos
             </p>
 
-            <a href="/linktofacebook" class="contact-socials__item">
+            <a target="_blank" href="https://www.facebook.com/profile.php?id=61553762250571" class="contact-socials__item">
                 <picture class="contact-socials__img">
                     <source srcset="/build/img/facebook.webp" type="image/webp">
                     <img loading="lazy" src="/build/img/facebook.png" width="100" height="100" alt="icono facebook">
                 </picture>
                 <h2 class="contact-socials__label">@Rental's y Diversiones</h2>
             </a>
-            <a href="/linktowhatsapp" class="contact-socials__item">
+            <a target="_blank" href="https://wa.me/3541107510" class="contact-socials__item">
                 <picture class="contact-socials__img">
                     <source srcset="/build/img/whatsapp.webp" type="image/webp">
                     <img loading="lazy" src="/build/img/whatsapp.png" width="100" height="100" alt="icono whatsapp">
                 </picture>
-                <h2 class="contact-socials__label">1234567890</h2>
+                <h2 class="contact-socials__label">3541107510</h2>
             </a>
-            <a href="tel:+1234567890" class="contact-socials__item">
+            <a target="_blank" href="tel:+3541107510" class="contact-socials__item">
                 <picture class="contact-socials__img">
                     <source srcset="/build/img/telefono.webp" type="image/webp">
                     <img loading="lazy" src="/build/img/telefono.png" width="100" height="100" alt="icono teléfono">
@@ -41,7 +43,7 @@
                 <label for="name">Nombre:</label>
                 <input type="text" placeholder="Tu Nombre" id="nameContact" name="contact[name]" required>
 
-                <label for="name">Mensaje:</label>
+                <label for="message">Mensaje:</label>
                 <textarea id="message" name="contact[message]" required></textarea>
             </fieldset>
 
