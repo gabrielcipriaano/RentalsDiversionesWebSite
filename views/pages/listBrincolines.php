@@ -15,7 +15,7 @@
                     </h3>
 
                     <p class="add__description">
-                        <?php echo $brincolin->description;?>
+                        <?php echo $brincolin->getShortDesctiption();?>
                     </p>
 
                     <a href="/brincolin?id=<?php echo $brincolin->id;?>" class="add__button">

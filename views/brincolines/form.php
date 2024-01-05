@@ -7,7 +7,7 @@
     <label for="description">Descripción:</label>
     <textarea placeholder="Ingresa un breve descripción" id="description" name="description"><?php echo $brincolin->description; ?></textarea>
 
-    <label for="capacidad">Capacity:</label>
+    <label for="capacidad">Capacidad:</label>
     <input type="number" placeholder="Capacidad del brincolin" id="capacity" name="capacity" value="<?php echo $brincolin->capacity; ?>">
 
     <label for="length">Longitud:</label>

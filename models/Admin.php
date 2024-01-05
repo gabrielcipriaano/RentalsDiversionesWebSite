@@ -50,7 +50,7 @@ class Admin extends ActiveRecord
             self::$alerts['error'][] = 'Ingresa la contraseña';
         }
         if (!strlen($this->password) > 6) {
-            self::$alerts['error'][] = 'La contraseña debe ser de almenos 6 caracteres';
+            self::$alerts['error'][] = 'La contraseña debe ser de al menos 6 caracteres';
         }
         if (!preg_match($passwordPattern, $this->password)) {
             self::$alerts['error'][] = 'Formato de contraseña no válido';

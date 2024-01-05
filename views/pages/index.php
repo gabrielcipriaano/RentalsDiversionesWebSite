@@ -24,8 +24,7 @@
 </main>
 
 
-
-<?php include 'listBrincolines.php'; ?>
-<?php include 'listFurniture.php'; ?>
+<?php $brincolines ? include 'listBrincolines.php' : '' ?>
+<?php $furnitures ? include 'listFurniture.php' : ''; ?>
 <?php include 'contactSection.php'; ?>
 <?php include 'benefits.php'; ?>

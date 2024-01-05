@@ -1,4 +1,4 @@
-<section class="contact contenedor">
+<section class="contact">
     <div class="contact__message">
         <h3>¡Convierte Tu Evento en una Experiencia Inolvidable!</h3>
         <p>Transforma tu evento con nosotros. Contáctanos por redes sociales, llamada o llena el formulario y te responderemos</p>
@@ -18,7 +18,7 @@
                     <img loading="lazy" src="/build/img/whatsapp.png" width="50" height="50" alt="icono whatsapp" class="add__img-src">
                 </picture>
             </a>
-            <a target="_blank" href="tel:+3541107510">
+            <a target="_blank" href="tel:3541107510">
                 <picture class="contact__icon">
                     <source srcset="/build/img/telefono.webp" type="image/webp">
                     <img loading="lazy" src="/build/img/telefono.png" width="50" height="50" alt="icono telefono" class="add__img-src">

@@ -15,7 +15,7 @@
                     </h3>
 
                     <p class="add__description">
-                        <?php echo $furniture->description;?>
+                        <?php echo $furniture->getShortDesctiption();?>
                     </p>
 
                     <a href="/furniture?id=<?php echo $furniture->id;?>" class="add__button">
